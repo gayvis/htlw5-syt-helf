@@ -101,7 +101,6 @@ int main() {
         lcd_i2c_clear(&lcd);
 
         if (worked == 1) {
-            // format output
             lcd_i2c_gotoxy(&lcd, 0, 0);
             sprintf(formatedText, "Temp: %.2f", temperature);
             lcd_i2c_puts(&lcd, formatedText);
