@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "lcd_i2c.h"
+#include "../libs/lcd_i2c.h"
 
 #include <wiringPi.h>
 
