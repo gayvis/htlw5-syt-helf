@@ -23,7 +23,6 @@ int8_t opt_rows = 2;
 const double SHH_A = 1.129148e-3;
 const double SHH_B = 2.34125e-4;
 const double SHH_C = 8.76741e-8;
-char formatedText[30];
 
 double steinhartHart(double resistance) {
     double log_r  = log(resistance);
@@ -52,9 +51,9 @@ void readSteinhartHart(double *temperature, double _resistance) {
     *temperature = getTempCelsius(analogRead(ADSPIN + 1), _resistance);
 }
 
-
 int main() {
     double light = 0, temperature = 0;
+    char formatedText[30];
 
     // setup wiring pi
     wiringPiSetupPhys();

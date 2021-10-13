@@ -17,8 +17,6 @@ int8_t opt_address = 0x27;
 int8_t opt_cols = 16;
 int8_t opt_rows = 2;
 
-char formatedText[30];
-
 void readBH(double *lux) {
     int handle = wiringPiI2CSetup(0x5C);
 
@@ -32,6 +30,7 @@ void readBH(double *lux) {
 
 int main() {
     double lux = 0;
+    char formatedText[30];
 
     // setup wiring pi
     wiringPiSetupPhys();
