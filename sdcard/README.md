@@ -67,6 +67,9 @@ mmcblk0     179:0    0  7.4G  0 disk
 mmcblk2     179:32   0 14.4G  0 disk
 └─mmcblk2p1 179:33   0 14.4G  0 part
 ```
+
+
+
 <hr>
 
 ````bash
@@ -90,6 +93,17 @@ done
 <hr>
 
 `root@raspi-it-01:~# mount -t ext4 /dev/mmcblk2 /media/sd0/ -o user=pi`
+
+<hr>
+
+````bash
+root@raspi-it-01:~# lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+mmcblk0     179:0    0  7.4G  0 disk
+├─mmcblk0p1 179:1    0  256M  0 part /boot
+└─mmcblk0p2 179:2    0  7.1G  0 part /
+mmcblk2     179:32   0 14.4G  0 disk /media/sd0
+````
 
 <hr>
 
