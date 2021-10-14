@@ -114,3 +114,23 @@ drwxr-xr-x 3 pi   pi    4096 Oct 14 08:16 .
 drwxr-xr-x 3 root root  4096 Oct 14 08:09 ..
 drwx------ 2 root root 16384 Oct 14 08:06 lost+found
 ````
+
+<br><br>
+
+### DHT11 Ausgabe
+
+```bash
+pi@raspi-it-01:/media/sd0 $ cat rumpfhuber.log
+2021-14-10 10:08:30: Sensor not working...
+2021-14-10 10:08:40: Temperature: 24.00 Humidity: 22.00
+2021-14-10 10:08:50: Temperature: 24.00 Humidity: 22.00
+2021-14-10 10:09:00: Temperature: 24.00 Humidity: 22.00
+2021-14-10 10:09:10: Temperature: 24.00 Humidity: 22.00
+2021-14-10 10:09:20: Temperature: 24.00 Humidity: 22.00
+2021-14-10 10:09:30: Temperature: 24.00 Humidity: 22.00
+2021-14-10 10:09:40: Temperature: 24.00 Humidity: 22.00
+2021-14-10 10:09:50: Temperature: 24.00 Humidity: 22.00
+2021-14-10 10:10:00: Temperature: 24.00 Humidity: 22.00
+2021-14-10 10:10:10: Temperature: 24.00 Humidity: 22.00
+2021-14-10 10:10:20: Temperature: 24.00 Humidity: 22.00
+```
