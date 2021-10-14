@@ -3,6 +3,6 @@ project(htlw5_syt_raspi C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(htlw5_syt_raspi lcd/sensor_ads1115.c libs/lcd_i2c.c libs/lcd_i2c.h)
+add_executable(htlw5_syt_raspi sdcard/sdcard_dht11.c)
 
 target_link_libraries(htlw5_syt_raspi wiringPi pthread m)
