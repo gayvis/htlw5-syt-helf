@@ -21,8 +21,6 @@ double temperature;
 char formatedText[30];
 
 int main() {
-    double lux = 0;
-
     // setup wiring pi
     wiringPiSetupPhys();
 
@@ -41,14 +39,25 @@ int main() {
     // turn backlight on
     LCD_I2C_BACKLIGHT_ON(&lcd);
 
-    // read cpu temerature
+    // open file
     temperatureFile = fopen ("/sys/class/thermal/thermal_zone0/temp", "r");
+
+    // check if file could be opened
     if (temperatureFile != NULL) {
+        // read temeperature
         fscanf (temperatureFile, "%lf", &temperature);
+
+        // process temperature
         temperature /= 1000;
+
+        // close file stream
         fclose (temperatureFile);
     }
+
+    // format temp into string
     sprintf(formatedText, "Temp: %.2f °C", temperature);
+
+    // set string on display
     lcd_i2c_puts(&lcd, formatedText);
 
     return 0;
