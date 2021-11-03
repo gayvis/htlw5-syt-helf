@@ -7,6 +7,6 @@
 | `lcd_i2c_init(&lcd);` | Software-Reset, Bereinigung des Cursors, Cursor in Home-Position setzen |
 | `lcd.rows = 2;`<br>`lcd.cols = 16;` | Sitzen der LCD Dimension |
 | `lcd_i2c_backlight(&lcd, 1);` | LCD Hintergrundslicht einschalten |
-| `char formatedText[30];<br>sprintf(formatedText, "Temp: %.2f °C", temperature);` | Ausgabe vorbereiten mit sprintf |
+| `char formatedText[30];`<br>`sprintf(formatedText, "Temp: %.2f °C", temperature);` | Ausgabe vorbereiten mit sprintf |
 | `lcd_i2c_gotoxy(&lcd, 0, 0);` | Display-Cursor setzen |
 | `lcd_i2c_puts(&lcd, formatedText);` | Schreiben des vorbereiteten Textes auf das LCD Display |
