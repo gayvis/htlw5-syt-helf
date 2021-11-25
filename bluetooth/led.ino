@@ -107,29 +107,21 @@ void loop() {
   if (Serial.available()){
     data_in=Serial.read();  //Get next character 
 
-    Serial.println(data_in);
-
     if(data_in=='G'){ //  Slider
       slider_value=Serial.parseInt();
       //<--- Perhaps do something with slider_value here
-      Serial.println("g");
-      Serial.println(slider_value);
       analogWrite(LED_G, slider_value);
     }
 
     if(data_in=='B'){ //  Slider
       slider_value=Serial.parseInt();
       //<--- Perhaps do something with slider_value here
-      Serial.println("b");
-      Serial.println(slider_value);
       analogWrite(LED_B, slider_value);
     }
 
     if(data_in=='R'){ //  Slider
       slider_value=Serial.parseInt();
       //<--- Perhaps do something with slider_value here
-      Serial.println("r");
-      Serial.println(slider_value);
       analogWrite(LED_R, slider_value);
     }
 
