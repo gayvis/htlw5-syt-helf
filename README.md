@@ -2,8 +2,8 @@
 
 ### Protokolle
 
-- [Protokoll 01 - LCD](./protokolle/Protokoll 01 - LCD.pdf)
-- [Protokoll 02 - SD Card](./protokolle/Protokoll 02 - SD Card.pdf)
+- [Protokoll 01 - LCD](./protokolle/Protokoll01_LCD.pdf)
+- [Protokoll 02 - SD Card](./protokolle/Protokoll02_SDCard.pdf)
 
 ### Übungen
 
