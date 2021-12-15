@@ -53,7 +53,7 @@ dtoverlay=sdio,poll_once=off,bus_width=1
 
 ```bash
 dtoverlay=mmc_spi
-dtparam=spi=on
+dtparam=spi=off
 ```
 
 <hr>
