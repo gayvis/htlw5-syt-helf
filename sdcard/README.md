@@ -98,6 +98,14 @@ done
 
 <hr>
 
+```bash
+root@raspi-it-01:~# mkdir /media/sd0/
+root@raspi-it-01:~# chmod 775 /media/sd0/
+root@raspi-it-01:~# chown pi:pi /media/sd0/
+```
+
+<hr>
+
 `root@raspi-it-01:~# mount -t ext4 /dev/mmcblk2 /media/sd0/ -o user=pi`
 
 <hr>
