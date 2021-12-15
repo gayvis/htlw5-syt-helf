@@ -59,6 +59,12 @@ dtparam=spi=off
 <hr>
 
 ```bash
+dmesg -w | grep mmc_spi
+```
+
+<hr>
+
+```bash
 root@raspi-it-01:~# lsblk
 NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
 mmcblk0     179:0    0  7.4G  0 disk
