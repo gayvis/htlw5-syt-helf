@@ -105,8 +105,11 @@ int main() {
     openLogFile();
 
     // check if file stream is successfully open
-    if (logFile != NULL)
+    if (logFile != NULL) {
+        // write 12x sensor data and wait 10 sec between
         writeSensorDataToFile(12, 10000);
-
-    closeLogFile();
+        
+        // close log file
+        closeLogFile();
+    }
 }
