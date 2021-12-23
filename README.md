@@ -13,4 +13,4 @@
 | [Raspberry Pi: SD Card](./sdcard/) | [Vorbereitungen am Raspberry Pi](./sdcard/README.md) <br> [Dateiausgabe eines DHT11](./sdcard/sdcard_dht11.c) |
 | [Arduino: SD Card](./sdcard_arduino/) | [Dateiausgabe eines LDR](./sdcard_arduino/sdcard_arduino.ino) |
 | [Arduino: Bluetooth](./bluetooth/) | [LED Steuerung](./bluetooth/led.ino) <br> [DC Motor Steuerung](./bluetooth/dcmotor.ino) <br> [DHT11 Anzeige](./bluetooth/dht11.ino) <br> [Bewegungssensor mit LED Steuerung](/bluetooth/bewegungssensor_led.ino) |
-| [Arduino: UART](./uart/) | [Master Arduino](./uart/UART_LEDs_LDR_Master.ino) <br> [Slave Arduino](./uart/UART_LEDs_LDR_Slave.ino) |
+| [Arduino: Universal Asynchronous Receiver Transmitter](./uart/) | [Master Arduino](./uart/UART_LEDs_LDR_Master.ino) <br> [Slave Arduino](./uart/UART_LEDs_LDR_Slave.ino) |
