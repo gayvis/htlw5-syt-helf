@@ -4,6 +4,7 @@
 
 - [Protokoll 01 - LCD](./protokolle/Protokoll01_LCD.pdf)
 - [Protokoll 02 - SD Card](./protokolle/Protokoll02_SDCard.pdf)
+- [Protokoll 03 - Bluetooth](./protokolle/Protokoll02_Bluetooth.pdf)
 
 ### Übungen
 
