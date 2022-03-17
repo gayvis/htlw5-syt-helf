@@ -17,3 +17,4 @@
 | [Arduino: Universal Asynchronous Receiver Transmitter (UART)](./uart/) | [Master Arduino](./uart/UART_LEDs_LDR_Master.ino) <br> [Slave Arduino](./uart/UART_LEDs_LDR_Slave.ino) |
 | [Arduino: Inter-Integrated Circuit (I2C)](./i2c/) | [Master Arduino](./i2c/I2C_LEDs_LDR_Master.ino) <br> [Slave Arduino](./i2c/I2C_LEDs_LDR_Slave.ino) |
 | [Arduino: Serial Peripheral Interface (SPI)](./spi/) | [Master Arduino](./spi/SPI_CircuitDigest_LEDs_LDR_Master.ino) <br> [Slave Arduino](./spi/SPI_CircuitDigest_LEDs_LDR_Slave.ino)
+| [Arduino: Controller Area Network (CAN)](./CAN/) | [Master Arduino](./can/5AHIT_FrKr_MCP2515-CAN_LEDs_LDR_Master.ino) <br> [Slave Arduino](./can/5AHIT_FrKr_MCP2515-CAN-LEDs_LDR_Slave.ino)
