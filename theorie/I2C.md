@@ -19,3 +19,7 @@
 		- Nach dem Lese- bzw. Schreibvorgang: Slave sendet ein Acknowledge (`ACK`) - Master quittiert diesen anschließend (außer beim Broadcast)
 	- `Repeated-Start` kann vorkommen, um die erneute Übertragung zu triggern
 	- Alle Bytes werden dabei „Most Significant Bit First“ übertragen.
+
+Quellen:
+- https://www.mikrocontroller.net/articles/I²C
+- https://de.wikipedia.org/wiki/I²C
