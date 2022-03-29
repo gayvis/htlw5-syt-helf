@@ -1,6 +1,6 @@
 # Bussysteme
 
-- [UART - Universal Asynchronous Receiver / Transmitter](uart.md)
-- [I²C - Inter-Integrated Circuit](i2c.md)
-- [SPI - Serial Peripheral Interface](spi.md)
-- [CAN - Controller Area Network](can.md)
+- [UART - Universal Asynchronous Receiver / Transmitter](UART.md)
+- [I²C - Inter-Integrated Circuit](I2C.md)
+- [SPI - Serial Peripheral Interface](SPI.md)
+- [CAN - Controller Area Network](CAN.md)
