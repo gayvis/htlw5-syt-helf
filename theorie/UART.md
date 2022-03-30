@@ -67,3 +67,23 @@ boolean requestSerialInt(byte command, int *value) {
   return success;
 }
 ```
+
+### Read
+```c
+boolean readSerialInt(int *value) {
+  boolean success = false;
+  byte received[2];
+  delay(2);                   // give slave time to accomplish work (1 is not enough)
+  success = softSerial.available() >= 2;
+  if (success) {              // slave may send less than requested
+    received[0] = softSerial.read();                 // receive MSB byte of LDR value from slave
+    received[1] = softSerial.read();                 // receive LSB byte of LDR value from slave
+    *value = received[0] * 256 + received[1]; // build int from 2 bytes
+    Serial.print(F("Master: LDR: "));
+    Serial.print('('); Serial.print(received[0]);
+    Serial.print(' '); Serial.print(received[1]);
+    Serial.print(") ");
+  }
+  return success;
+}
+```
