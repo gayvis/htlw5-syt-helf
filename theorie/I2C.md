@@ -25,7 +25,9 @@ Quellen:
 
 ## Code
 
-Write
+### Slave
+
+- Slave hat Interrupts & Events
 
 ```c
 void writeI2cByte(byte value) {
@@ -46,9 +48,65 @@ void writeI2cInt(int value) {
 }
 ```
 
-Request
+```c
+// function that executes whenever data is received from master
+// this function is registered as an event, see setup()
+void receiveEvent(int howMany)
+{
+  static byte receiveMultipleBytes = 0x00;
+  static int receiveMultipleBytesAmount = 0;
+  static byte receiveInt[2];
+  
+  if (Wire.available() > 0) // fetch received command
+  {
+    received = Wire.read(); // receive byte as a character
+
+    // check if command is 'motor' ==> receiving bytes
+    if (received == MOTOR) {
+      receiveMultipleBytes = MOTOR; 
+      
+    } else {
+
+      // check if multiple bytes are incoming
+      if (receiveMultipleBytes != 0x00) {
+
+        // save byte to array and inrement counter
+        receiveInt[receiveMultipleBytesAmount] = received;
+        receiveMultipleBytesAmount++;
+
+        // check if all bytes are received
+        if (receiveMultipleBytesAmount == 2) {
+          
+          // reset
+          receiveMultipleBytes = 0x00;
+          receiveMultipleBytesAmount = 0;
+
+          // build bytes to int
+          int ldr = receiveInt[0] + receiveInt[1] * 256;
+    
+          Serial.print("MY LDR: ");
+          Serial.println(ldr);   
+        }
+      
+      } else {
+          // only one byte ==> no command attributes
+	   // trigger loop as new command to be processed is available
+          jobAvailable = true;
+      }
+    }
+  }
+}
+```
+
+### Master
 
 ```c
+void writeI2cByte(byte value) {
+  Wire.beginTransmission(LEDS_I2C_ADDR); //Starts communication with to device number LEDS_I2C_ADDR
+  Wire.write(value);       // sends command byte LED_ON or LED_OFF to slave
+  Wire.endTransmission();          // stop transmitting -> transfer data
+}
+
 boolean requestI2cByte(byte command, byte *value) {
   boolean success = false;
   Wire.beginTransmission(LEDS_I2C_ADDR);
@@ -83,4 +141,12 @@ boolean requestI2cInt(byte command, int *value) {
   }
   return success;
 }
-```
+
+void writeI2cInt1(int value) {
+  unsentData[0] = value & 0xFF;        // preserve low byte of LDR value in unsent data at index 0 (MSB first!)
+  unsentData[1] = (value >> 8) & 0xFF; // send the high byte of the LDR value on next transfer to master
+  unsentCount = 2;                   // remember count of unsent bytes
+
+  writeI2cByte(unsentData[0]);
+  writeI2cByte(unsentData[1]);
+}
