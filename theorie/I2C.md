@@ -8,7 +8,6 @@
 - Mindestens einen Master sowie bis zu 127 Slaves (mehrere Master => "Multi-Master-Bus")
 	- Slaves müssen alle mit einer individuellen Adresse codiert werden
 	- Broadcastkanal, um alle Slaves anzusprechen
-
 - Adressierung
 	- Master sprechen die Slaves jeweils aktiv => Slaves können nie selbstständig beginnen
 	- Kommunikation
