@@ -109,4 +109,4 @@ void requestSpiInt(byte command, int *value) {
   Serial.print(' '); Serial.print(received[1]);
   Serial.print(") ");
 }
-``
+```
