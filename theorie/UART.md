@@ -22,7 +22,7 @@ Quelle: https://www.rohde-schwarz.com/at/produkte/messtechnik/oszilloskope/educa
 
 ## Code
 
-Write
+### Write
 
 ```c
 void writeSerialByte(byte value) {
@@ -35,7 +35,7 @@ void writeSerialInt(int value) {
 }
 ```
 
-Request
+### Request
 
 ```c
 boolean requestSerialByte(byte command, byte *value) {
