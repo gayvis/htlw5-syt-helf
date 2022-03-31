@@ -4,6 +4,8 @@
 
 - Master-Slave-Bus
 - Serieller 2-Draht-Bus
+	- SDA ... Serial Data
+	- SCL ... Serial Clock
 - Bidirektionale Daten- und Taktleitung verwendet
 - Mindestens einen Master sowie bis zu 127 Slaves (mehrere Master => "Multi-Master-Bus")
 	- Slaves müssen alle mit einer individuellen Adresse codiert werden
